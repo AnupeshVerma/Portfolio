@@ -5,15 +5,30 @@ import SmartStreetLight from "../assets/projects/SmartStreetLight.png";
 
 const Projects = () => {
   const projects = [
-    { id: 1, src: hotelTransylvania },
-    { id: 2, src: electronicsSociety },
-    { id: 3, src: SmartStreetLight },
+    {
+      id: 1,
+      src: hotelTransylvania,
+      link: "https://github.com/anupeshverma/Hotel-Transylvania-Django",
+      techStack: "HTML, CSS, JavaScript, Tailwind, Django"
+    },
+    {
+      id: 2,
+      src: electronicsSociety,
+      link: "https://github.com/Electronics-Society-MNNIT/ECE-Society",
+      techStack: "HTML, CSS, JavaScript, Tailwind, Django"
+    },
+    {
+      id: 3,
+      src: SmartStreetLight,
+      link: "https://github.com/anupeshverma/Smart_Street_Light",
+      techStack: "Python, NumPy, OpenCV, YOLO"
+    },
   ];
 
   return (
     <div
       name="projects"
-      className="bg-gradient-to-b from-black to-gray-800 w-full text-white py-10"
+      className="bg-gradient-to-b from-black to-gray-800 w-full text-white pt-16"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full ">
         <div className="pb-8">
@@ -24,20 +39,23 @@ const Projects = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {projects.map(({ id, src }) => (
-            <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
+          {projects.map(({ id, src, link, techStack }) => (
+            <div key={id} className="shadow-md shadow-gray-600 rounded-lg pt-2 pb-5">
               <img
                 src={src}
                 alt=""
                 className="rounded-md duration-200 hover:scale-105"
               />
-              <div className="flex items-center justify-center">
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
-                  Demo
-                </button>
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+              <div className=" w-full flex flex-col items-center justify-center text-center">
+                <a
+                  href={link}
+                  target="_blank"
+                  className=" px-6 py-2 m-4 duration-200 hover:scale-105 rounded-md shadow-md shadow-blue-600"
+                >
                   Code
-                </button>
+                </a>
+              <div id="techStack" className="m-2 p-2text-lg font-bold" >Tech Stack: </div>
+              <div id="techStacks" className="mx-2">{techStack}</div>
               </div>
             </div>
           ))}

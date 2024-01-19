@@ -9,7 +9,7 @@ const Home = () => {
       name="home"
       className="md:h-screen w-full bg-gradient-to-b from-black via-black to-gray-500"
     >
-      <div className="max-w-screen-lg mx-auto flex flex-col md:flex-row items-center justify-center  md:h-full pt-20 p-4 ">
+      <div className="max-w-screen-lg mx-auto flex flex-col md:flex-row gap-5 items-center justify-center  md:h-full pt-20 p-4 ">
         <div id="sideText" className="flex flex-col justify-center md:h-full">
           <h2 className="text-4xl sm:text-7xl font-bold text-white">
             I'm a Full Stack Developer
