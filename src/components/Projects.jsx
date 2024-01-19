@@ -50,6 +50,7 @@ const Projects = () => {
                 <a
                   href={link}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className=" px-6 py-2 m-4 duration-200 hover:scale-105 rounded-md shadow-md shadow-blue-600"
                 >
                   Code
