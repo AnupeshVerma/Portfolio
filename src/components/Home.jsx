@@ -1,15 +1,18 @@
-import React from "react";
+import React, {useEffect} from "react";
 import heroImage from "../assets/heroImage.jpg";
 import { FaCircleArrowRight } from "react-icons/fa6";
 import { Link } from "react-scroll";
 
 const Home = () => {
+  useEffect(() => {
+    document.title = "Anupesh's Portfolio";
+  }, []);
   return (
     <div
       name="home"
-      className="md:h-screen w-full bg-gradient-to-b from-black via-black to-gray-500"
+      className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-500"
     >
-      <div className="max-w-screen-lg mx-auto flex flex-col md:flex-row gap-8 items-center justify-center  md:h-full pt-20 p-4 ">
+      <div className="max-w-screen-lg mx-auto flex flex-col md:flex-row items-center justify-evenly h-full pt-20 p-4 ">
         <div id="sideText" className="flex flex-col justify-center md:h-full">
           <h2 className="text-4xl sm:text-7xl font-bold text-white">
             I'm a Full Stack Developer
@@ -36,7 +39,7 @@ const Home = () => {
           <img
             src={heroImage}
             alt="myProfile"
-            className="rounded-2xl mx-auto w-2/3 md:w-3/4"
+            className="rounded-2xl mx-auto md:w-3/4"
           />
         </div>
       </div>
