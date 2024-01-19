@@ -42,7 +42,7 @@ const SocialLinks = () => {
       ),
       href: "/resume.pdf",
       style: "rounded-br-md",
-      download: true,
+      href: "https://drive.google.com/file/d/1WzSwm9ztfZEup4NHN9gtIhfNvNpKLdaw/view?usp=drive_link"
     },
   ];
 
@@ -61,7 +61,6 @@ const SocialLinks = () => {
             <a
               href={href}
               className="flex justify-between items-center w-full text-white"
-              download={download}
               target="_blank"
               rel="noreferrer"
             >

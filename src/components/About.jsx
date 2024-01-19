@@ -14,12 +14,8 @@ const About = () => {
       </div>
 
       <p className="text-xl mt-12">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius,
-        deserunt illum mollitia officiis qui exercitationem perferendis neque
-        quasi a recusandae necessitatibus tempora iusto! Blanditiis error
-        iste, totam fugiat recusandae rerum laborum perferendis molestiae
-        aperiam asperiores nemo. Magni dolor maxime debitis vitae, eaque hic
-        ab mollitia voluptatibus, a nostrum eveniet laborum!
+      I'm a final year student pursuing Electronics and Communication Engineering at MNNIT Allahabad. With a keen interest in technology, I'm constantly exploring new opportunities to expand my skills and knowledge. As a 𝐖𝐞𝐛 𝐓𝐞𝐚𝐦 𝐅𝐚𝐜𝐢𝐥𝐢𝐭𝐚𝐭𝐨𝐫 𝐚𝐭 𝐆𝐃𝐒𝐂 𝐌𝐍𝐍𝐈𝐓𝐀 and 𝐖𝐞𝐛 𝐓𝐞𝐚𝐦 𝐂𝐨𝐨𝐫𝐝𝐢𝐧𝐚𝐭𝐨𝐫 𝐚𝐭 𝐭𝐡𝐞 𝐄𝐥𝐞𝐜𝐭𝐫𝐨𝐧𝐢𝐜𝐬 𝐒𝐨𝐜𝐢𝐞𝐭𝐲 in my college, I'm responsible for managing and coordinating various web-related activities. In my free time, I enjoy writing blogs on technical topics to share my insights with others. 
+Join me on LinkedIn to stay up-to-date with the latest trends and connect with other tech enthusiasts. Let's network and collaborate to create a brighter future for the tech industry.
       </p>
 
       <br />
