@@ -7,67 +7,73 @@ const SocialLinks = () => {
   const links = [
     {
       id: 1,
-      child: (
-        <>
-          LinkedIn <FaLinkedin size={30} />
-        </>
-      ),
+      name: "LinkedIn",
+      icon: <FaLinkedin size={30} />,
       href: "https://www.linkedin.com/in/AnupeshVerma/",
       style: "rounded-tr-md",
     },
     {
       id: 2,
-      child: (
-        <>
-          GitHub <FaGithub size={30} />
-        </>
-      ),
+      name: "GitHub",
+      icon: <FaGithub size={30} />,
       href: "https://github.com/anupeshverma",
     },
     {
       id: 3,
-      child: (
-        <>
-          Mail <HiOutlineMail size={30} />
-        </>
-      ),
+      name: "Mail",
+      icon: <HiOutlineMail size={30} />,
       href: "mailto:Anupeshkverma121@gmail.com",
     },
     {
       id: 4,
-      child: (
-        <>
-          Resume <BsFillPersonLinesFill size={30} />
-        </>
-      ),
+      name: "Resume",
+      icon: <BsFillPersonLinesFill size={30} />,
       style: "rounded-br-md",
-      href: "https://drive.google.com/file/d/1WzSwm9ztfZEup4NHN9gtIhfNvNpKLdaw/view?usp=drive_link"
+      href: "https://drive.google.com/file/d/1WzSwm9ztfZEup4NHN9gtIhfNvNpKLdaw/view?usp=drive_link",
     },
   ];
 
   return (
-    <div className="hidden md:flex flex-col top-[35%] left-0 fixed">
-      <ul>
-        {links.map(({ id, child, href, style, download }) => (
-          <li
-            key={id}
-            className={
-              "flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-500" +
-              " " +
-              style
-            }
-          >
-            <a
-              href={href}
-              className="flex justify-between items-center w-full text-white"
-              target="_blank"
-              rel="noreferrer"
+    <div>
+      <div className="hidden md:flex flex-col top-[35%] left-0 fixed">
+        <ul>
+          {links.map(({ id, name, icon, href, style }) => (
+            <li
+              key={id}
+              className={
+                "flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-600" +
+                " " +
+                style
+              }
             >
-              {child}
-            </a>
-          </li>
-        ))}
-      </ul>
+              <a
+                href={href}
+                className="flex justify-between items-center w-full text-white"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {name} {icon}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div id="bottomBar" className="md:hidden bottom-0 w-full bg-gray-800 fixed">
+        <ul className="list-none flex w-full justify-center space-x-10 text-white">
+          {links.map(({ id, icon, href}) => (
+            <li key={id} className={"p-2 rounded-full"}>
+              <a
+                href={href}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {icon}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
