@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import heroImage from "../assets/heroImage.jpg";
 import { FaCircleArrowRight } from "react-icons/fa6";
 import { Link } from "react-scroll";
-import { Typewriter, Cursor } from "react-simple-typewriter";
+import { Typewriter} from "react-simple-typewriter";
 
 const Home = () => {
   useEffect(() => {
