@@ -41,7 +41,7 @@ const About = () => {
           variants={{ hidden: { x: -50 }, visible: { x: 0 } }}
           initial="hidden"
           animate={mainControls}
-          transition={{ duration: 0.5, ease: "easeIn" }}
+          transition={{ duration: 1, delay: 0.5, ease: "easeIn" }}
         >
           My journey started with the hum of circuits and blossomed into the
           clickety-clack of code. I'm <strong>Anupesh Kumar Verma</strong>, an
@@ -59,7 +59,7 @@ const About = () => {
             variants={{ hidden: { left: 0 }, visible: { left: "100%" } }}
             initial="hidden"
             animate={slideControls}
-            transition={{ duration: 0.5, ease: "easeIn" }}
+            transition={{ duration: 1, delay: 0.25, ease: "easeIn" }}
           ></motion.div>
         </motion.p>
 
@@ -70,7 +70,7 @@ const About = () => {
           variants={{ hidden: { x: -50 }, visible: { x: 0 } }}
           initial="hidden"
           animate={mainControls}
-          transition={{ duration: 0.5, ease: "easeIn" }}
+          transition={{ duration: 1, delay:0.5, ease: "easeIn" }}
         >
           I'm an aspiring software developer, a weaver of digital tapestries
           that solve problems, connect us, and push the boundaries of what's
@@ -83,7 +83,7 @@ const About = () => {
             variants={{ hidden: { left: 0 }, visible: { left: "100%" } }}
             initial="hidden"
             animate={slideControls}
-            transition={{ duration: 0.5, ease: "easeIn" }}
+            transition={{ duration: 1,delay:0.75, ease: "easeIn" }}
           ></motion.div>
         </motion.p>
       </div>
