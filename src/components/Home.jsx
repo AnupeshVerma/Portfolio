@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import heroImage from "../assets/heroImage.jpg";
 import { FaCircleArrowRight } from "react-icons/fa6";
 import { Link } from "react-scroll";
-import { Typewriter} from "react-simple-typewriter";
+import { Typewriter } from "react-simple-typewriter";
+import { motion } from "framer-motion";
 
 const Home = () => {
   useEffect(() => {
@@ -15,27 +16,33 @@ const Home = () => {
       className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-700"
     >
       <div className="max-w-screen-lg mx-auto flex flex-col md:flex-row items-center justify-evenly h-full pt-20 p-4 ">
-        <div
+        <motion.div
           id="sideText"
           className="md:w-1/2 flex flex-col justify-center md:h-full"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 1 }}
         >
-          <h2 className="text-4xl sm:text-7xl font-bold text-white">
-            I'm a
+          <h3 className="text-4xl sm:text-6xl font-bold text-white">
+            Hey, I'm Anupesh
             <br />
+          </h3>
+          <div className="text-white my-2 text-2xl md:text-3xl">
+            I'm a
             <span className="text-cyan-500">
-              {" "}
               <Typewriter
-                words={["Full Stack Developer", "Software Developer"]}
+                words={[" Full Stack Developer", " Software Developer"]}
                 loop={10}
                 cursor
                 typeSpeed={100}
                 deleteSpeed={100}
               />
             </span>
-          </h2>
+          </div>
           <p className="text-gray-500 py-4 max-w-md">
-            Hello! My name is Anupesh and I am a full stack developer with
-            experience in building websites.
+            From algorithms to dazzling web experiences: Anupesh here, a
+            software developer passionate about bringing innovative ideas to
+            life, turning your vision into reality.
           </p>
           <div>
             <Link
@@ -50,12 +57,15 @@ const Home = () => {
               </span>
             </Link>
           </div>
-        </div>
+        </motion.div>
         <div id="heroImage" className="md:w-1/2">
-          <img
+          <motion.img
             src={heroImage}
             alt="myProfile"
             className="rounded-2xl mx-auto md:w-3/4"
+            initial={{ opacity: 0, x: "25vw" }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3, duration: 1 }}
           />
         </div>
       </div>

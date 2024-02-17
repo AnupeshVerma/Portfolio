@@ -2,6 +2,7 @@ import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 const SocialLinks = () => {
   const links = [
@@ -34,8 +35,13 @@ const SocialLinks = () => {
   ];
 
   return (
-    <div>
-      <div className="hidden md:flex flex-col top-[35%] left-0 fixed">
+    <div className="z-50">
+      <motion.div
+        className="hidden md:flex flex-col top-[35%] left-0 fixed"
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.2, duration: 1 }}
+      >
         <ul>
           {links.map(({ id, name, icon, href, style }) => (
             <li
@@ -57,23 +63,25 @@ const SocialLinks = () => {
             </li>
           ))}
         </ul>
-      </div>
+      </motion.div>
 
-      <div id="bottomBar" className="md:hidden bottom-0 w-full bg-gray-800 fixed">
+      <motion.div
+        id="bottomBar"
+        className="md:hidden bottom-0 w-full bg-gray-800 fixed"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3, duration: 1 }}
+      >
         <ul className="list-none flex w-full justify-center space-x-10 text-white">
-          {links.map(({ id, icon, href}) => (
+          {links.map(({ id, icon, href }) => (
             <li key={id} className={"p-2 rounded-full"}>
-              <a
-                href={href}
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href={href} target="_blank" rel="noreferrer">
                 {icon}
               </a>
             </li>
           ))}
         </ul>
-      </div>
+      </motion.div>
     </div>
   );
 };

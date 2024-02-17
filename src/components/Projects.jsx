@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
 import hotelTransylvania from "../assets/projects/HotelTransylvania.png";
 import electronicsSociety from "../assets/projects/ElectronicsSociety.png";
 import SmartStreetLight from "../assets/projects/SmartStreetLight.png";
+import { motion, useInView, useAnimation } from "framer-motion";
 
 const Projects = () => {
   const projects = [
@@ -9,22 +10,30 @@ const Projects = () => {
       id: 1,
       src: hotelTransylvania,
       link: "https://github.com/anupeshverma/Hotel-Transylvania-Django",
-      techStack: "HTML, CSS, JavaScript, Tailwind, Django"
+      techStack: "HTML, CSS, JavaScript, Tailwind, Django",
     },
     {
       id: 2,
       src: electronicsSociety,
       link: "https://github.com/Electronics-Society-MNNIT/ECE-Society",
-      techStack: "HTML, CSS, JavaScript, Tailwind, Django"
+      techStack: "HTML, CSS, JavaScript, Tailwind, Django",
     },
     {
       id: 3,
       src: SmartStreetLight,
       link: "https://github.com/anupeshverma/Smart_Street_Light",
-      techStack: "Python, NumPy, OpenCV, YOLO"
+      techStack: "Python, NumPy, OpenCV, YOLO",
     },
   ];
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  const mainControls = useAnimation();
 
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
   return (
     <div
       name="projects"
@@ -38,9 +47,22 @@ const Projects = () => {
           <p className="py-6">Check out some of my work right here</p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
+        <motion.div
+          className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0"
+          ref={ref}
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={mainControls}
+          transition={{ duration: 1, delay: 0.25, ease:"easeIn"}}
+        >
           {projects.map(({ id, src, link, techStack }) => (
-            <div key={id} className="shadow-md shadow-gray-600 rounded-lg pt-2 pb-5">
+            <div
+              key={id}
+              className="shadow-md shadow-gray-600 rounded-lg pt-2 pb-5"
+            >
               <img
                 src={src}
                 alt=""
@@ -55,12 +77,16 @@ const Projects = () => {
                 >
                   Code
                 </a>
-              <div id="techStack" className="m-2 p-2text-lg font-bold" >Tech Stack: </div>
-              <div id="techStacks" className="mx-2">{techStack}</div>
+                <div id="techStack" className="m-2 p-2text-lg font-bold">
+                  Tech Stack:{" "}
+                </div>
+                <div id="techStacks" className="mx-2">
+                  {techStack}
+                </div>
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

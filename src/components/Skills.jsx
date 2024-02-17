@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { motion, useInView, useAnimation } from "framer-motion";
 
 import c from "../assets/C.png";
 import cpp from "../assets/cpp.png";
@@ -16,23 +17,23 @@ import tailwind from "../assets/tailwind.png";
 const Skills = () => {
   const techs = [
     {
-        id: 1,
-        src: c,
-        title: "C",
-        style: "shadow-blue-500",
-      },
-      {
-        id: 2,
-        src: cpp,
-        title: "C++",
-        style: "shadow-blue-500",
-      },
-      {
-        id: 3,
-        src: python,
-        title: "Python",
-        style: "shadow-sky-800",
-      },
+      id: 1,
+      src: c,
+      title: "C",
+      style: "shadow-blue-500",
+    },
+    {
+      id: 2,
+      src: cpp,
+      title: "C++",
+      style: "shadow-blue-500",
+    },
+    {
+      id: 3,
+      src: python,
+      title: "Python",
+      style: "shadow-sky-800",
+    },
     {
       id: 4,
       src: html,
@@ -89,6 +90,23 @@ const Skills = () => {
     },
   ];
 
+  const variants = {
+    hiddenLeft: { opacity: 0, x: -50 },
+    hiddenBottom: { opacity: 0, y: 50 },
+    hiddenRight: { opacity: 0, x: 50 },
+    visible: { opacity: 1, x: 0, y: 0 },
+  };
+
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
+
   return (
     <div
       name="skills"
@@ -102,15 +120,37 @@ const Skills = () => {
           <p className="py-6">These are the technologies I've worked with</p>
         </div>
 
-        <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0">
+        <div
+          className="w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0"
+          ref={ref}
+        >
           {techs.map(({ id, src, title, style }) => (
-            <div
+            <motion.div
               key={id}
               className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
+              variants={
+                id % 3 === 1
+                  ? {
+                      hidden: { opacity: 0, x: -50 },
+                      visible: { opacity: 1, x: 0 },
+                    }
+                  : id % 3 === 2
+                  ? {
+                      hidden: { opacity: 0, y: 50 },
+                      visible: { opacity: 1, y: 0 },
+                    }
+                  : {
+                      hidden: { opacity: 0, x: -50 },
+                      visible: { opacity: 1, x: 0 },
+                    }
+              }
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 0.5 }}
             >
               <img src={src} alt="" className="w-20 mx-auto" />
               <p className="mt-4">{title}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
