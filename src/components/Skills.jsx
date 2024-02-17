@@ -126,13 +126,13 @@ const Skills = () => {
                       visible: { opacity: 1, y: 0 },
                     }
                   : {
-                      hidden: { opacity: 0, x: -50 },
+                      hidden: { opacity: 0, x: 50 },
                       visible: { opacity: 1, x: 0 },
                     }
               }
               initial="hidden"
               animate={mainControls}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.5, delay:0.2 }}
             >
               <img src={src} alt="" className="w-20 mx-auto" />
               <p className="mt-4">{title}</p>

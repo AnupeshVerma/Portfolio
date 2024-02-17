@@ -46,7 +46,7 @@ const About = () => {
           a mission to weave code that connects, inspires, and simplifies lives
           - one line at a time..
           <motion.div
-            className="bg-cyan-500 absolute top-1 bottom-1 left-0 right-0 z-2"
+            className="bg-gradient-to-br from bg-gray-600 to-gray-900 absolute top-1 bottom-1 left-0 right-0 z-2 rounded-sm"
             variants={{ hidden: { left: 0 }, visible: { left: "100%" } }}
             initial="hidden"
             animate={slideControls}
@@ -57,7 +57,7 @@ const About = () => {
         <br />
 
         <motion.p
-          className="text-xl leading-8 text-justify"
+          className="relative text-xl leading-8 text-justify"
           variants={{ hidden: { x: -50 }, visible: { x: 0 } }}
           initial="hidden"
           animate={mainControls}
@@ -70,7 +70,7 @@ const About = () => {
           future where technology transcends the binary, where circuits sing
           symphonies of progress, and the human touch guides the digital brush.
           <motion.div
-            className="bg-cyan-500 absolute top-1 bottom-1 left-0 right-0 z-2"
+            className="bg-gradient-to-br from bg-gray-600 to-gray-900 absolute top-1 bottom-1 left-0 right-0 z-2 rounded-sm"
             variants={{ hidden: { left: 0 }, visible: { left: "100%" } }}
             initial="hidden"
             animate={slideControls}
