@@ -33,7 +33,7 @@ const Projects = () => {
     if (isInView) {
       mainControls.start("visible");
     }
-  }, [isInView]);
+  }, [isInView,mainControls]);
   return (
     <div
       name="projects"

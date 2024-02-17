@@ -90,12 +90,6 @@ const Skills = () => {
     },
   ];
 
-  const variants = {
-    hiddenLeft: { opacity: 0, x: -50 },
-    hiddenBottom: { opacity: 0, y: 50 },
-    hiddenRight: { opacity: 0, x: 50 },
-    visible: { opacity: 1, x: 0, y: 0 },
-  };
 
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -105,7 +99,7 @@ const Skills = () => {
     if (isInView) {
       mainControls.start("visible");
     }
-  }, [isInView]);
+  }, [isInView, mainControls]);
 
   return (
     <div

@@ -10,7 +10,7 @@ const Contact = () => {
     if (isInView) {
       mainControls.start("visible");
     }
-  }, [isInView]);
+  }, [isInView, mainControls]);
   return (
     <div
       name="contact"
