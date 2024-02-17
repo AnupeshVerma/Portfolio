@@ -1,19 +1,10 @@
-import React, { useEffect, useRef } from "react";
-import { motion, useInView, useAnimation } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
+import useAnimationInView from "../customHooks/useAnimationInView";
 
 const About = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref);
+  const { ref, mainControls, slideControls } = useAnimationInView();
 
-  const mainControls = useAnimation();
-  const slideControls = useAnimation();
-
-  useEffect(() => {
-    if (isInView) {
-      mainControls.start("visible");
-      slideControls.start("visible");
-    }
-  }, [isInView, mainControls, slideControls]);
   return (
     <div
       name="about"
@@ -70,7 +61,7 @@ const About = () => {
           variants={{ hidden: { x: -50 }, visible: { x: 0 } }}
           initial="hidden"
           animate={mainControls}
-          transition={{ duration: 1, delay:0.5, ease: "easeIn" }}
+          transition={{ duration: 1, delay: 0.5, ease: "easeIn" }}
         >
           I'm an aspiring software developer, a weaver of digital tapestries
           that solve problems, connect us, and push the boundaries of what's
@@ -83,7 +74,7 @@ const About = () => {
             variants={{ hidden: { left: 0 }, visible: { left: "100%" } }}
             initial="hidden"
             animate={slideControls}
-            transition={{ duration: 1,delay:0.75, ease: "easeIn" }}
+            transition={{ duration: 1, delay: 0.75, ease: "easeIn" }}
           ></motion.div>
         </motion.p>
       </div>

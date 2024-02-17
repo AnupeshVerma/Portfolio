@@ -1,8 +1,10 @@
-import React, {useEffect, useRef} from "react";
 import hotelTransylvania from "../assets/projects/HotelTransylvania.png";
 import electronicsSociety from "../assets/projects/ElectronicsSociety.png";
 import SmartStreetLight from "../assets/projects/SmartStreetLight.png";
-import { motion, useInView, useAnimation } from "framer-motion";
+
+import React from "react";
+import { motion } from "framer-motion";
+import useAnimationInView from "../customHooks/useAnimationInView";
 
 const Projects = () => {
   const projects = [
@@ -25,15 +27,7 @@ const Projects = () => {
       techStack: "Python, NumPy, OpenCV, YOLO",
     },
   ];
-  const ref = useRef(null);
-  const isInView = useInView(ref);
-  const mainControls = useAnimation();
-
-  useEffect(() => {
-    if (isInView) {
-      mainControls.start("visible");
-    }
-  }, [isInView,mainControls]);
+  const { ref, mainControls} = useAnimationInView();
   return (
     <div
       name="projects"

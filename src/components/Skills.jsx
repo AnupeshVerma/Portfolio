@@ -1,5 +1,6 @@
-import React, { useEffect, useRef } from "react";
-import { motion, useInView, useAnimation } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
+import useAnimationInView from "../customHooks/useAnimationInView";
 
 import c from "../assets/C.png";
 import cpp from "../assets/cpp.png";
@@ -90,16 +91,7 @@ const Skills = () => {
     },
   ];
 
-
-  const ref = useRef(null);
-  const isInView = useInView(ref);
-  const mainControls = useAnimation();
-
-  useEffect(() => {
-    if (isInView) {
-      mainControls.start("visible");
-    }
-  }, [isInView, mainControls]);
+  const { ref, mainControls} = useAnimationInView();
 
   return (
     <div
