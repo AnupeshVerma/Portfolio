@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import heroImage from "../assets/heroImage.jpg";
 import { FaCircleArrowRight } from "react-icons/fa6";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { HiOutlineMail } from "react-icons/hi";
 import { Link } from "react-scroll";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
@@ -9,6 +11,27 @@ const Home = () => {
   useEffect(() => {
     document.title = "Anupesh's Portfolio";
   }, []);
+
+  const links = [
+    {
+      id: 1,
+      name: "LinkedIn",
+      icon: <FaLinkedin size={40} />,
+      href: "https://www.linkedin.com/in/AnupeshVerma/",
+    },
+    {
+      id: 2,
+      name: "GitHub",
+      icon: <FaGithub size={40} />,
+      href: "https://github.com/anupeshverma",
+    },
+    {
+      id: 3,
+      name: "Mail",
+      icon: <HiOutlineMail size={40} />,
+      href: "mailto:Anupeshkverma121@gmail.com",
+    },
+  ];
 
   return (
     <div
@@ -44,18 +67,27 @@ const Home = () => {
             software developer passionate about bringing innovative ideas to
             life, turning your vision into reality.
           </p>
-          <div>
-            <Link
-              to="projects"
-              smooth
-              duration={500}
-              className=" group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
-            >
-              Portfolio
-              <span className="group-hover:rotate-90 duration-300 ml-2">
-                <FaCircleArrowRight size={20} />
-              </span>
-            </Link>
+
+          <div id="connectLinks" className="md:hidden">
+            <ul className="list-none flex">
+              {links.map(({ id, name, icon, href }) => (
+                <li
+                  key={id}
+                  className={
+                    "my-1 mx-2 p-2 rounded-full duration-300 bg-cyan-900 text-cyan-600"
+                  }
+                >
+                  <a
+                    href={href}
+                    className="flex justify-between items-center w-full text-white"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {icon}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         </motion.div>
         <div id="heroImage" className="md:w-1/2">
