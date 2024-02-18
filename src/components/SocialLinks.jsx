@@ -65,23 +65,6 @@ const SocialLinks = () => {
         </ul>
       </motion.div>
 
-      <motion.div
-        id="bottomBar"
-        className="md:hidden bottom-0 w-full bg-gray-800 fixed"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3, duration: 1 }}
-      >
-        <ul className="list-none flex w-full justify-center space-x-10 text-white">
-          {links.map(({ id, icon, href }) => (
-            <li key={id} className={"p-2 rounded-full"}>
-              <a href={href} target="_blank" rel="noreferrer">
-                {icon}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </motion.div>
     </div>
   );
 };

@@ -36,7 +36,7 @@ const Home = () => {
       name="home"
       className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-700"
     >
-      <div className="max-w-screen-lg mx-auto flex flex-col md:flex-row items-center justify-evenly h-full pt-20 p-4 ">
+      <div className="max-w-screen-lg mx-auto flex flex-col md:flex-row items-center justify-evenly h-full pt-10 px-4 ">
         <motion.div
           id="sideText"
           className="md:w-1/2 flex flex-col justify-center md:h-full"
@@ -60,20 +60,24 @@ const Home = () => {
               />
             </span>
           </div>
-          <p className="text-gray-500 py-2 max-w-md">
+          <p className="text-gray-500 py-2 text-justify max-w-md">
             From algorithms to dazzling web experiences: Anupesh here, a
             software developer passionate about bringing innovative ideas to
             life, turning your vision into reality.
           </p>
 
-          <div id="connectLinks" className="md:hidden">
+          <motion.div
+            id="connectLinks"
+            className="md:hidden mt-2"
+            initial={{ opacity: 0, x:-20  }}
+            animate={{ opacity: 1, x:0 }}
+            transition={{ delay: 1.5, duration: 1 }}
+          >
             <ul className="list-none flex">
               {links.map(({ id, name, icon, href }) => (
                 <li
                   key={id}
-                  className={
-                    "m-2 p-2 rounded-full duration-300 bg-gray-900 "
-                  }
+                  className={"mx-2 p-2 rounded-full duration-300 bg-gray-900 "}
                 >
                   <a
                     href={href}
@@ -86,7 +90,7 @@ const Home = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
         </motion.div>
         <div id="heroImage" className="md:w-1/2">
           <motion.img
