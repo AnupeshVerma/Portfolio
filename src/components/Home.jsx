@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import heroImage from "../assets/heroImage.jpg";
-import { FaCircleArrowRight } from "react-icons/fa6";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
-import { Link } from "react-scroll";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 
@@ -16,19 +14,19 @@ const Home = () => {
     {
       id: 1,
       name: "LinkedIn",
-      icon: <FaLinkedin size={40} />,
+      icon: <FaLinkedin size={35} />,
       href: "https://www.linkedin.com/in/AnupeshVerma/",
     },
     {
       id: 2,
       name: "GitHub",
-      icon: <FaGithub size={40} />,
+      icon: <FaGithub size={35} />,
       href: "https://github.com/anupeshverma",
     },
     {
       id: 3,
       name: "Mail",
-      icon: <HiOutlineMail size={40} />,
+      icon: <HiOutlineMail size={35} />,
       href: "mailto:Anupeshkverma121@gmail.com",
     },
   ];
@@ -62,7 +60,7 @@ const Home = () => {
               />
             </span>
           </div>
-          <p className="text-gray-500 py-4 max-w-md">
+          <p className="text-gray-500 py-2 max-w-md">
             From algorithms to dazzling web experiences: Anupesh here, a
             software developer passionate about bringing innovative ideas to
             life, turning your vision into reality.
@@ -74,7 +72,7 @@ const Home = () => {
                 <li
                   key={id}
                   className={
-                    "my-1 mx-2 p-2 rounded-full duration-300 bg-cyan-900 text-cyan-600"
+                    "m-2 p-2 rounded-full duration-300 bg-gray-900 "
                   }
                 >
                   <a
