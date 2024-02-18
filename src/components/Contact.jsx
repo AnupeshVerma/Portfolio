@@ -7,16 +7,16 @@ const Contact = () => {
   return (
     <div
       name="contact"
-      className="w-full bg-gradient-to-b from-black to-gray-800 p-4 text-white pt-16"
+      className="w-full bg-gradient-to-b from-black to-gray-800  text-white px-4 md:pt-20 py-16 md:py-4"
     >
-      <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto">
+      <div className="flex flex-col px-4 justify-center max-w-screen-lg mx-auto">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">
             Contact
           </p>
           <motion.p
             ref={ref}
-            className="py-6"
+            className="pt-6"
             variants={{
               hidden: { opacity: 0, y: -10 },
               visible: { opacity: 1, y: 0 },
@@ -40,7 +40,7 @@ const Contact = () => {
               type="text"
               name="name"
               placeholder="Enter your name"
-              className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
+              className="p-2 bg-transparent border-2 rounded-md text-white"
               variants={{
                 hidden: { opacity: 0, x: -30 },
                 visible: { opacity: 1, x: 0 },
@@ -54,7 +54,7 @@ const Contact = () => {
               type="email"
               name="email"
               placeholder="Enter your email"
-              className="my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
+              className="my-4 p-2 bg-transparent border-2 rounded-md text-white"
               variants={{
                 hidden: { opacity: 0, x: 30 },
                 visible: { opacity: 1, x: 0 },
@@ -68,7 +68,7 @@ const Contact = () => {
               name="message"
               placeholder="Enter your message"
               rows="10"
-              className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
+              className="p-2 bg-transparent border-2 rounded-md text-white"
               variants={{
                 hidden: { opacity: 0, x: -30 },
                 visible: { opacity: 1, x: 0 },

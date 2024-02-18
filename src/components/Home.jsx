@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import heroImage from "../assets/heroImage.jpg";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
@@ -25,6 +25,12 @@ const Home = () => {
     },
     {
       id: 3,
+      name: "Instagram",
+      icon: <FaInstagram size={35} />,
+      href: "https://www.instagram.com/anupesh_verma/",
+    },
+    {
+      id: 4,
       name: "Mail",
       icon: <HiOutlineMail size={35} />,
       href: "mailto:Anupeshkverma121@gmail.com",
@@ -69,8 +75,8 @@ const Home = () => {
           <motion.div
             id="connectLinks"
             className="md:hidden mt-2"
-            initial={{ opacity: 0, x:-20  }}
-            animate={{ opacity: 1, x:0 }}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1.5, duration: 1 }}
           >
             <ul className="list-none flex">
@@ -81,7 +87,7 @@ const Home = () => {
                 >
                   <a
                     href={href}
-                    className="flex justify-between items-center w-full text-white"
+                    className="flex justify-between items-center w-full text-white hover:bg-cyan-600"
                     target="_blank"
                     rel="noreferrer"
                   >

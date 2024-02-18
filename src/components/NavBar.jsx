@@ -55,17 +55,19 @@ const NavBar = () => {
 
       <motion.div
         id="bottomBar"
-        className=" bottom-0 w-full bg-gray-800 fixed"
+        className="z-50 md:hidden bottom-0 w-full bg-gray-800 fixed"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 1 }}
       >
-        <ul className="list-none flex w-full justify-center space-x-10 text-white">
-          {links.map(({ id, icon, href }) => (
-            <li key={id} className={"p-2 rounded-full text-cyan-500"}>
-              <a href={href} target="_blank" rel="noreferrer">
-                {icon}
-              </a>
+        <ul className="list-none flex w-full justify-evenly text-white">
+          {links.map(({ id, icon, link }) => (
+            <li key={id} className={"py-2 rounded-full text-cyan-500 capitalize"}>
+            <Link to={link} smooth duration={500}>
+                <span className="flex flex-col items-center">{icon}{link}</span>
+              </Link>
+                
+              
             </li>
           ))}
         </ul>
