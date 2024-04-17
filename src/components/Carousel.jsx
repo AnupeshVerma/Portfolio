@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const Carousel = ({ images }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
+  
   const settings = {
     infinite: true,
     speed: 1000,
@@ -13,7 +12,7 @@ const Carousel = ({ images }) => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000, 
-    beforeChange: (current, next) => setCurrentIndex(next)
+    
   };
 
   return (

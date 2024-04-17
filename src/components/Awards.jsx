@@ -16,15 +16,15 @@ function Awards() {
     {
       id: 1,
       title: "14th Global Rank in Hacksquad 2022",
-      description:
-        "A team event for contribution in open source projects on GitHub.",
       images: [hackSquadLogo, hackSquadGoodies],
+      description:"A team event for contribution in open source projects on GitHub.",
     },
     {
       id: 2,
       title: "DevElevate Platinum Winner",
-      description: "A blog writing competion organized by Showwcase",
       images: [devElevateLogo, devElevateWin],
+      link: "https://www.showwcase.com/article/25364/dev-elevate-platinum-winners",
+      description: "A blog writing competion organized by Showwcase",
     },
   ];
 
