@@ -2,6 +2,7 @@ import React from "react";
 import Carousel from "./Carousel";
 import { motion } from "framer-motion";
 import useAnimationInView from "../customHooks/useAnimationInView";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 import hackSquadLogo from "../assets/Awards/hacksquad2022.jpg";
 import hackSquadGoodies from "../assets/Awards/hacksqaud2022Goodies.jpeg";
@@ -17,7 +18,9 @@ function Awards() {
       id: 1,
       title: "14th Global Rank in Hacksquad 2022",
       images: [hackSquadLogo, hackSquadGoodies],
-      description:"A team event for contribution in open source projects on GitHub.",
+      link: "https://www.linkedin.com/posts/anupeshverma_hacksquad-hacksquadabr2022-opensource-activity-6997575065181540352-TzBp",
+      description:
+        "A team event for contribution in open source projects on GitHub.",
     },
     {
       id: 2,
@@ -53,9 +56,7 @@ function Awards() {
           {awardData.map((award) => (
             <motion.div
               key={award.id}
-              className={`w-full flex flex-col md:flex-row py-6 gap-y-4 sm:gap-y-12 justify-evenly items-center ${
-                award.id % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-              }`}
+              className={`w-full mt-4 shadow-sm shadow-sky-500 rounded-md flex flex-col md:flex-row py-6 gap-y-4 sm:gap-y-12 justify-evenly items-center ${award.id % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
               variants={
                 award.id % 2 === 0
                   ? {
@@ -72,13 +73,15 @@ function Awards() {
               transition={{ duration: 1, delay: 0.2 }}
             >
               <Carousel images={award.images} />
-              <div className="content text-justify">
+              <div className="content text-center ">
                 <p className="px-3 text-lg md:text-2xl font-semibold">
                   {award.title}
                 </p>
                 <p className="px-3 text-sm text-gray-400">
                   {award.description}
                 </p>
+                <br/>
+                <a href={award.link} className="inline-flex items-center border p-2 rounded-md shadow-md shadow-sky-600 text-center text-xs">See more...&nbsp; <FaExternalLinkAlt /></a>
               </div>
             </motion.div>
           ))}

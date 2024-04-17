@@ -2,18 +2,21 @@ import React from "react";
 import { motion } from "framer-motion";
 import useAnimationInView from "../customHooks/useAnimationInView";
 
-import c from "../assets/C.png";
-import cpp from "../assets/cpp.png";
-import python from "../assets/python.png";
-import html from "../assets/html.png";
-import css from "../assets/css.png";
-import javascript from "../assets/javascript.png";
-import reactImage from "../assets/react.png";
-import django from "../assets/django.png";
-import opencv from "../assets/opencv.png";
-import sql from "../assets/sql.png";
-import github from "../assets/github.png";
-import tailwind from "../assets/tailwind.png";
+import c from "../assets/Skills/C.png";
+import cpp from "../assets/Skills/cpp.png";
+import python from "../assets/Skills/python.png";
+import html from "../assets/Skills/html.png";
+import css from "../assets/Skills/css.png";
+import javascript from "../assets/Skills/javascript.png";
+import tailwind from "../assets/Skills/tailwind.png";
+import django from "../assets/Skills/django.png";
+import reactImage from "../assets/Skills/react.png";
+import express from  "../assets/Skills/express.png";
+import node from "../assets/Skills/node.png"
+import mongodb from "../assets/Skills/mongodb.png"
+import sql from "../assets/Skills/sql.png";
+import opencv from "../assets/Skills/opencv.png";
+import github from "../assets/Skills/github.png";
 
 const Skills = () => {
   const techs = [
@@ -55,36 +58,54 @@ const Skills = () => {
     },
     {
       id: 7,
-      src: reactImage,
-      title: "React",
-      style: "shadow-blue-600",
-    },
-    {
-      id: 8,
       src: tailwind,
       title: "Tailwind",
       style: "shadow-sky-400",
     },
     {
-      id: 9,
+      id: 8,
       src: django,
       title: "Django",
       style: "shadow-green-500",
     },
     {
+      id: 9,
+      src: reactImage,
+      title: "React",
+      style: "shadow-blue-600",
+    },
+    {
       id: 10,
+      src: express,
+      title: "Express",
+      style: "shadow-white",
+    },
+    {
+      id: 11,
+      src: node,
+      title: "Node",
+      style: "shadow-lime-500",
+    },
+    {
+      id: 12,
+      src: mongodb,
+      title: "MongoDB",
+      style: "shadow-green-600",
+    },
+    {
+      id: 13,
       src: opencv,
       title: "OpenCV",
       style: "shadow-gray-400",
     },
     {
-      id: 11,
+      id: 14,
       src: sql,
       title: "SQL",
       style: "shadow-sky-400",
     },
     {
-      id: 12,
+      id: 15,
       src: github,
       title: "GitHub",
       style: "shadow-gray-400",
