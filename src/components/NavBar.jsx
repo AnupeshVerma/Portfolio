@@ -63,7 +63,7 @@ const NavBar = () => {
       >
         <ul className="list-none flex w-full justify-evenly text-white">
           {links.map(({ id, icon, link }) => (
-            <li key={id} className={"py-2 rounded-full text-cyan-500 capitalize"}>
+            <li key={id} className={"py-2 rounded-full text-cyan-500 text-xs capitalize"}>
             <Link to={link} smooth duration={500}>
                 <span className="flex flex-col items-center">{icon}{link}</span>
               </Link>
