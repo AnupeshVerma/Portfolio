@@ -20,7 +20,7 @@ const About = () => {
             }}
             initial="hidden"
             animate={mainControls}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1 }}
           >
             About
           </motion.p>

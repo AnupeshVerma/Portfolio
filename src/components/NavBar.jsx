@@ -14,8 +14,9 @@ const NavBar = () => {
     { id: 1, link: "home", icon: <FcHome size={30} /> },
     { id: 2, link: "about", icon: <FcAbout size={30} /> },
     { id: 3, link: "projects", icon: <GoProjectSymlink size={30} /> },
-    { id: 4, link: "skills", icon: <GiSkills size={30} /> },
-    { id: 5, link: "contact", icon: <FcVoicePresentation size={30} /> },
+    { id: 4, link: "awards", icon: <GoProjectSymlink size={30} /> },
+    { id: 5, link: "skills", icon: <GiSkills size={30} /> },
+    { id: 6, link: "contact", icon: <FcVoicePresentation size={30} /> },
   ];
 
   return (

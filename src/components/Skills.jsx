@@ -91,12 +91,12 @@ const Skills = () => {
     },
   ];
 
-  const { ref, mainControls} = useAnimationInView();
+  const { ref, mainControls } = useAnimationInView();
 
   return (
     <div
       name="skills"
-      className="bg-gradient-to-b from-gray-800 to-black w-full pt-16"
+      className="bg-gradient-to-b from-black to-gray-800 w-full pt-16"
     >
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
         <div>
@@ -132,7 +132,7 @@ const Skills = () => {
               }
               initial="hidden"
               animate={mainControls}
-              transition={{ duration: 0.5, delay:0.2 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
             >
               <img src={src} alt="" className="w-20 mx-auto" />
               <p className="mt-4">{title}</p>
