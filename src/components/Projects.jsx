@@ -1,33 +1,38 @@
-import hotelTransylvania from "../assets/projects/HotelTransylvania.png";
-import electronicsSociety from "../assets/projects/ElectronicsSociety.png";
-import SmartStreetLight from "../assets/projects/SmartStreetLight.png";
 
 import React from "react";
 import { motion } from "framer-motion";
 import useAnimationInView from "../customHooks/useAnimationInView";
 
+import hotelTransylvania from "../assets/projects/HotelTransylvania.png";
+import electronicsSociety from "../assets/projects/ElectronicsSociety.png";
+import SmartStreetLight from "../assets/projects/SmartStreetLight.png";
+
 const Projects = () => {
   const projects = [
     {
       id: 1,
-      src: hotelTransylvania,
-      link: "https://github.com/anupeshverma/Hotel-Transylvania-Django",
+      title: "Hotel Transylvania",
+      img_src: hotelTransylvania,
+      live_link: "https://anupeshverma.pythonanywhere.com/",
+      repo_link: "https://github.com/anupeshverma/Hotel-Transylvania-Django",
       techStack: "HTML, CSS, JavaScript, Tailwind, Django",
     },
     {
       id: 2,
-      src: electronicsSociety,
-      link: "https://github.com/Electronics-Society-MNNIT/ECE-Society",
+      title: "Electronics Society",
+      img_src: electronicsSociety,
+      repo_link: "https://github.com/Electronics-Society-MNNIT/ECE-Society",
       techStack: "HTML, CSS, JavaScript, Tailwind, Django",
     },
     {
       id: 3,
-      src: SmartStreetLight,
-      link: "https://github.com/anupeshverma/Smart_Street_Light",
+      title: "Smart Street Light",
+      img_src: SmartStreetLight,
+      repo_link: "https://github.com/anupeshverma/Smart_Street_Light",
       techStack: "Python, NumPy, OpenCV, YOLO",
     },
   ];
-  const { ref, mainControls} = useAnimationInView();
+  const { ref, mainControls } = useAnimationInView();
   return (
     <div
       name="projects"
@@ -50,21 +55,27 @@ const Projects = () => {
           }}
           initial="hidden"
           animate={mainControls}
-          transition={{ duration: 1, delay: 0.25, ease:"easeIn"}}
+          transition={{ duration: 1, delay: 0.25, ease: "easeIn" }}
         >
-          {projects.map(({ id, src, link, techStack }) => (
+          {projects.map(({ id, title, img_src, live_link, repo_link, techStack }) => (
             <div
               key={id}
               className="shadow-md shadow-gray-600 rounded-lg pt-2 pb-5"
             >
-              <img
-                src={src}
-                alt=""
-                className="rounded-md duration-200 hover:scale-105"
-              />
+              <a href={live_link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={img_src}
+                  alt=""
+                  className="rounded-md duration-200 hover:scale-105"
+                />
+
+              </a>
               <div className=" w-full flex flex-col items-center justify-center text-center">
                 <a
-                  href={link}
+                  href={repo_link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className=" px-6 py-2 m-4 duration-200 hover:scale-105 rounded-md shadow-md shadow-blue-600"
