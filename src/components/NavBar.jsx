@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 
 import { FcHome } from "react-icons/fc";
-import { FcAbout } from "react-icons/fc";
+import { FcLibrary } from "react-icons/fc";
 import { GoProjectSymlink } from "react-icons/go";
 import { GiSkills } from "react-icons/gi";
 import { FcVoicePresentation } from "react-icons/fc";
@@ -12,8 +12,8 @@ const NavBar = () => {
   const links = [
     // Navigate according to the name given during function return
     { id: 1, link: "home", icon: <FcHome size={30} /> },
-    { id: 2, link: "about", icon: <FcAbout size={30} /> },
-    { id: 3, link: "projects", icon: <GoProjectSymlink size={30} /> },
+    { id: 2, link: "education", icon: <FcLibrary size={30} /> },
+    // { id: 3, link: "projects", icon: <GoProjectSymlink size={30} /> },
     { id: 4, link: "awards", icon: <GoProjectSymlink size={30} /> },
     { id: 5, link: "skills", icon: <GiSkills size={30} /> },
     { id: 6, link: "contact", icon: <FcVoicePresentation size={30} /> },

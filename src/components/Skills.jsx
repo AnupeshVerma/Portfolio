@@ -216,7 +216,7 @@ const Skills = () => {
         {/* Programming Languages */}
         <div className="my-8">
           <p className="text-2xl font-semibold">Programming Languages</p>
-          <div className="w-full grid grid-cols-3 sm:grid-cols-4 gap-8 text-center py-8 px-12 sm:px-0">
+          <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-8 text-center py-8 px-12 sm:px-0">
             {renderTechs(programmingLanguages)}
           </div>
         </div>
@@ -224,7 +224,7 @@ const Skills = () => {
         {/* Web Development */}
         <div className="my-8">
           <p className="text-2xl font-semibold">Web Development</p>
-          <div className="w-full grid grid-cols-3 sm:grid-cols-4 gap-8 text-center py-8 px-12 sm:px-0">
+          <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-8 text-center py-8 px-12 sm:px-0">
             {renderTechs(webDevelopment)}
           </div>
         </div>
@@ -232,7 +232,7 @@ const Skills = () => {
         {/* Databases */}
         <div className="my-8">
           <p className="text-2xl font-semibold">Databases</p>
-          <div className="w-full grid grid-cols-3 sm:grid-cols-4 gap-8 text-center py-8 px-12 sm:px-0">
+          <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-8 text-center py-8 px-12 sm:px-0">
             {renderTechs(databases)}
           </div>
         </div>
@@ -240,7 +240,7 @@ const Skills = () => {
         {/* Developer Tools */}
         <div className="my-8">
           <p className="text-2xl font-semibold">Developer Tools</p>
-          <div className="w-full grid grid-cols-3 sm:grid-cols-4 gap-8 text-center py-8 px-12 sm:px-0" >
+          <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-8 text-center py-8 px-12 sm:px-0" >
             {renderTechs(developerTools)}
           </div>
         </div>
