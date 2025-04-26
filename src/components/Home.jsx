@@ -58,7 +58,7 @@ const Home = () => {
             I'm a
             <span className="text-cyan-500">
               <Typewriter
-                words={[" Full Stack Developer", " Software Developer"]}
+                words={[" ", " Data Engineer",]}
                 loop={10}
                 cursor
                 typeSpeed={100}
@@ -67,9 +67,7 @@ const Home = () => {
             </span>
           </div>
           <p className="text-gray-500 py-2 text-justify max-w-md">
-            From algorithms to dazzling web experiences: Anupesh here, a
-            software developer passionate about bringing innovative ideas to
-            life, turning your vision into reality.
+          From raw data to smart insights: Anupesh here, a data engineer passionate about building reliable data pipelines and turning your data into actionable value.
           </p>
 
           <motion.div
