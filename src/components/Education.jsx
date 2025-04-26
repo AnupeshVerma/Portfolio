@@ -68,7 +68,7 @@ function Education() {
                 iconStyle={{ background: "#138781", color: "#fff" }}
               >
                 <h1 className="education-title font-semibold text-xl">{education.title}</h1>
-                <h4 className="education-subtitle text-gray-400">{education.degree}</h4>
+                <h4 className="education-degree text-gray-400">{education.degree}</h4>
                 <h4 className="education-branch text-gray-400">{education.branch}</h4>
                 <h4 className="education-description text-gray-400">{education.description}</h4>
               </VerticalTimelineElement>
