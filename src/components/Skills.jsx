@@ -5,22 +5,27 @@ import useAnimationInView from "../customHooks/useAnimationInView";
 import c_img from "../assets/Skills/C.png";
 import cpp_img from "../assets/Skills/cpp.png";
 import python_img from "../assets/Skills/python.png";
-import javascript_img from "../assets/Skills/javascript.png";
+import sql_img from "../assets/Skills/sql.png";
+
 import html_img from "../assets/Skills/html.png";
 import css_img from "../assets/Skills/css.png";
 import tailwind_img from "../assets/Skills/tailwind.png";
+import javascript_img from "../assets/Skills/javascript.png";
 import django_img from "../assets/Skills/django.png";
 import react_img from "../assets/Skills/react.png";
-import express_img from "../assets/Skills/express.png";
-import node_img from "../assets/Skills/node.png";
+
 import postgresql_img from "../assets/Skills/postgresql.png";
-import cockroachdb_img from "../assets/Skills/cockroachdb.png";
 import mongodb_img from "../assets/Skills/mongodb.png";
-import sql_img from "../assets/Skills/sql.png";
-import opencv_img from "../assets/Skills/opencv.png";
+import snowflake from "../assets/Skills/snowflake.png";
+
+import airflow from "../assets/Skills/airflow.png";
+import spark from "../assets/Skills/spark.png";
+import pandas from "../assets/Skills/pandas.png";
+import aws from "../assets/Skills/aws.png";
 import git_img from "../assets/Skills/git.png"
-import gitlab_img from "../assets/Skills/gitlab.png"
 import github_img from "../assets/Skills/github.png";
+import gitlab_img from "../assets/Skills/gitlab.png"
+import opencv_img from "../assets/Skills/opencv.png";
 
 const Skills = () => {
   // Categorize the tech stack
@@ -45,9 +50,9 @@ const Skills = () => {
     },
     {
       skill_id: 4,
-      img_src: javascript_img,
-      skill_title: "JavaScript",
-      style: "shadow-yellow-500",
+      img_src: sql_img,
+      skill_title: "SQL",
+      style: "shadow-blue-600",
     },
   ];
 
@@ -61,7 +66,7 @@ const Skills = () => {
     {
       skill_id: 2,
       img_src: css_img,
-      skill_title: "CSS_img",
+      skill_title: "CSS",
       style: "shadow-blue-500",
     },
     {
@@ -72,34 +77,22 @@ const Skills = () => {
     },
     {
       skill_id: 4,
+      img_src: javascript_img,
+      skill_title: "JavaScript",
+      style: "shadow-yellow-500",
+    },
+    {
+      skill_id: 5,
       img_src: django_img,
       skill_title: "Django",
       style: "shadow-green-500",
     },
     {
-      skill_id: 5,
+      skill_id: 6,
       img_src: react_img,
       skill_title: "React",
       style: "shadow-blue-600",
-    },
-    {
-      skill_id: 6,
-      img_src: react_img,
-      skill_title: "React Native",
-      style: "shadow-blue-600",
-    },
-    {
-      skill_id: 7,
-      img_src: express_img,
-      skill_title: "Express",
-      style: "shadow-white",
-    },
-    {
-      skill_id: 8,
-      img_src: node_img,
-      skill_title: "Node",
-      style: "shadow-lime-500",
-    },
+    }
   ];
 
   const databases = [
@@ -111,47 +104,65 @@ const Skills = () => {
     },
     {
       skill_id: 2,
-      img_src: cockroachdb_img,
-      skill_title: "CockroachDB",
-      style: "shadow-indigo-600",
-    },
-    {
-      skill_id: 3,
       img_src: mongodb_img,
       skill_title: "MongoDB",
       style: "shadow-green-600",
     },
     {
-      skill_id: 4,
-      img_src: sql_img,
-      skill_title: "SQL",
-      style: "shadow-blue-600",
+      skill_id: 3,
+      img_src: snowflake,
+      skill_title: "Snowflake",
+      style: "shadow-sky-600",
     },
   ];
 
   const developerTools = [
     {
       skill_id: 1,
-      img_src: opencv_img,
-      skill_title: "OpenCV",
+      img_src: airflow,
+      skill_title: "Apache Airflow",
       style: "shadow-gray-400",
     },
     {
       skill_id: 2,
+      img_src: spark,
+      skill_title: "PySpark",
+      style: "shadow-orange-600",
+    },
+    {
+      skill_id: 3,
+      img_src: pandas,
+      skill_title: "Pandas",
+      style: "shadow-indigo-900",
+    },
+    {
+      skill_id: 4,
+      img_src: aws,
+      skill_title: "AWS",
+      style: "shadow-gray-700",
+    },
+    {
+      skill_id: 5,
       img_src: git_img,
       skill_title: "Git",
       style: "shadow-orange-600",
     },
     {
-      skill_id: 3,
+      skill_id: 6,
+      img_src: github_img,
+      skill_title: "GitHub",
+      style: "shadow-gray-400",
+    },
+    {
+      skill_id: 7,
       img_src: gitlab_img,
       skill_title: "Gitlab",
       style: "shadow-yellow-800",
     },
     {
-      skill_id: 3,
-      img_src: github_img,
-      skill_title: "GitHub",
+      skill_id: 8,
+      img_src: opencv_img,
+      skill_title: "OpenCV",
       style: "shadow-gray-400",
     },
   ];
