@@ -6,10 +6,9 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import useAnimationInView from "../customHooks/useAnimationInView";
-import { FaExternalLinkAlt } from "react-icons/fa";
 
 function Education() {
-  const { ref, mainControls, slideControls } = useAnimationInView();
+  const { ref, mainControls } = useAnimationInView();
 
   const educationData = [
     {
@@ -50,7 +49,7 @@ function Education() {
               visible: { opacity: 1, y: 0 },
             }}
             initial="hidden"
-            animate={slideControls}
+            animate={mainControls}
             transition={{ duration: 1 }}
           >
             Education
@@ -65,7 +64,7 @@ function Education() {
                 contentStyle={{ background: "transparent", color: "white" }}
                 contentArrowStyle={{ borderRight: "7px solid  white" }}
                 date={education.duration}
-                iconStyle={{ background: "#138781", color: "#fff" }}
+                iconStyle={{ background: "#138781", color: "#fff"}}
               >
                 <h1 className="education-title font-semibold text-xl">{education.title}</h1>
                 <h4 className="education-degree text-gray-400">{education.degree}</h4>
