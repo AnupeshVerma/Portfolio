@@ -40,7 +40,7 @@ const Home = () => {
   return (
     <div
       name="home"
-      className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-700"
+      className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800"
     >
       <div className="max-w-screen-lg mx-auto flex flex-col md:flex-row items-center justify-evenly h-full pt-10 px-4 ">
         <motion.div
@@ -58,7 +58,7 @@ const Home = () => {
             I'm a
             <span className="text-cyan-500">
               <Typewriter
-                words={[" ", " Data Engineer",]}
+                words={[" ", " Data Engineer"]}
                 loop={10}
                 cursor
                 typeSpeed={100}
@@ -67,7 +67,9 @@ const Home = () => {
             </span>
           </div>
           <p className="text-gray-500 py-2 text-justify max-w-md">
-          From raw data to smart insights: Anupesh here, a data engineer passionate about building reliable data pipelines and turning your data into actionable value.
+            From raw data to smart insights: Anupesh here, a data engineer
+            passionate about building reliable data pipelines and turning your
+            data into actionable value.
           </p>
 
           <motion.div

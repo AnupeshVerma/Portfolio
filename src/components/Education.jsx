@@ -6,6 +6,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import useAnimationInView from "../customHooks/useAnimationInView";
+import { ReactComponent as SchoolIcon } from "../assets/school.svg";
 
 function Education() {
   const { ref, mainControls } = useAnimationInView();
@@ -64,7 +65,8 @@ function Education() {
                 contentStyle={{ background: "transparent", color: "white" }}
                 contentArrowStyle={{ borderRight: "7px solid  white" }}
                 date={education.duration}
-                iconStyle={{ background: "#138781", color: "#fff"}}
+                iconStyle={{ background: "#138781" }}
+                icon={<SchoolIcon />}
               >
                 <h1 className="education-title font-semibold text-xl">{education.title}</h1>
                 <h4 className="education-degree text-gray-400">{education.degree}</h4>
