@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import useAnimationInView from "../customHooks/useAnimationInView";
+import { EMAIL } from "../constants";
 
 const Contact = () => {
   const { ref, mainControls} = useAnimationInView();
@@ -25,7 +26,11 @@ const Contact = () => {
             animate={mainControls}
             transition={{ duration: 0.5, delay: 0.25 }}
           >
-            Submit the form below to get in touch with me
+            Have a role or project in mind? Send me a message below, or email me at{" "}
+            <a href={`mailto:${EMAIL}`} className="text-cyan-400 underline">
+              {EMAIL}
+            </a>
+            .
           </motion.p>
         </div>
 

@@ -17,25 +17,25 @@ function Awards() {
   const awardData = [
     {
       id: 1,
-      title: "14th Global Rank in Hacksquad 2022",
+      title: "14th Global Rank in HackSquad 2022",
       images: [hackSquadLogo, hackSquadGoodies, hackSquadLeader],
       link: "https://www.linkedin.com/posts/anupeshverma_hacksquad-hacksquadabr2022-opensource-activity-6997575065181540352-TzBp",
       description:
-        "A team event for contribution in open source projects on GitHub.",
+        "A global team-based event for open-source contributions on GitHub.",
     },
     {
       id: 2,
       title: "DevElevate Platinum Winner",
       images: [devElevateLogo, devElevateWin],
       link: "https://www.showwcase.com/article/25364/dev-elevate-platinum-winners",
-      description: "A blog writing competion organized by Showwcase",
+      description: "A technical blog-writing competition organized by Showwcase",
     },
   ];
 
   return (
     <div
       name="awards"
-      className="bg-gradient-to-b from-gray-800 to-black text-white w-full pt-16"
+      className="bg-gradient-to-b from-black to-gray-800 text-white w-full pt-16"
     >
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
         <div className="heading">
@@ -86,6 +86,8 @@ function Awards() {
                 <br />
                 <a
                   href={award.link}
+                  target="_blank"
+                  rel="noreferrer"
                   className="inline-flex items-center border p-2 rounded-md shadow-md shadow-sky-600 text-center text-xs"
                 >
                   Know more...&nbsp; <FaExternalLinkAlt />

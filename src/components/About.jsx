@@ -34,18 +34,18 @@ const About = () => {
           animate={mainControls}
           transition={{ duration: 1, delay: 0.5, ease: "easeIn" }}
         >
-          My journey began with the hum of circuits for{" "}
-          <strong> Electronics and Communication Engineer</strong>, blossomed
-          into the clickety-clack of code. I’m Anupesh Kumar Verma, now
-          channeling my expertise as a <strong>Data Engineer</strong> at{" "}
-          <strong>Personify Health.</strong>
-          <motion.div
+          I'm Anupesh Kumar Verma, a <strong>Data Engineer</strong> at{" "}
+          <strong>Personify Health</strong>. I work on the pipelines and data
+          quality checks that turn raw healthcare files into trusted data for{" "}
+          <strong>60M+ users</strong>, using PySpark, Airflow, AWS, and
+          Snowflake.
+          <motion.span
             className="bg-gradient-to-br from bg-gray-600 to-gray-900 absolute top-1 bottom-1 left-0 right-0 z-2 rounded-sm"
             variants={{ hidden: { left: 0 }, visible: { left: "100%" } }}
             initial="hidden"
             animate={slideControls}
             transition={{ duration: 0.5, delay: 0.25, ease: "easeIn" }}
-          ></motion.div>
+          ></motion.span>
         </motion.p>
 
         <br />
@@ -57,21 +57,21 @@ const About = () => {
           animate={mainControls}
           transition={{ duration: 1, delay: 0.5, ease: "easeIn" }}
         >
-          After honing my backend and automation skills as a{" "}
-          <strong>Python Developer Intern</strong> at{" "}
-          <strong>EduGorilla</strong>, I now specialize in designing and
-          implementing scalable data pipelines, mastering data warehousing with
-          Snowflake, and optimizing data migration and transformation processes
-          using Python, SQL, and modern data tools. My work bridges raw data and
-          actionable insights, helping organizations unlock the true value of
-          their information.
-          <motion.div
+          Day to day, I build and maintain Airflow DAGs for an event-driven
+          ingestion platform, automate file monitoring, and onboard new
+          healthcare clients. I also build <strong>GenAI</strong> features on
+          top of the data layer, from RAG pipelines to multi-agent assistants on
+          Amazon Bedrock. Before Personify Health, I was a{" "}
+          <strong>Python Developer Intern</strong> at Infobay.ai (formerly
+          EduGorilla), and I hold a B.Tech in Electronics and Communication
+          Engineering from <strong>NIT Allahabad</strong>.
+          <motion.span
             className="bg-gradient-to-br from bg-gray-600 to-gray-900 absolute top-1 bottom-1 left-0 right-0 z-2 rounded-sm"
             variants={{ hidden: { left: 0 }, visible: { left: "100%" } }}
             initial="hidden"
             animate={slideControls}
             transition={{ duration: 0.25, delay: 0.5, ease: "easeIn" }}
-          ></motion.div>
+          ></motion.span>
         </motion.p>
       </div>
     </div>

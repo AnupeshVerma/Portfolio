@@ -3,6 +3,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { motion } from "framer-motion";
+import { RESUME_URL, EMAIL, LINKEDIN_URL, GITHUB_URL } from "../constants";
 
 const SocialLinks = () => {
   const links = [
@@ -10,27 +11,27 @@ const SocialLinks = () => {
       id: 1,
       name: "LinkedIn",
       icon: <FaLinkedin size={30} />,
-      href: "https://www.linkedin.com/in/AnupeshVerma/",
+      href: LINKEDIN_URL,
       style: "rounded-tr-md",
     },
     {
       id: 2,
       name: "GitHub",
       icon: <FaGithub size={30} />,
-      href: "https://github.com/anupeshverma",
+      href: GITHUB_URL,
     },
     {
       id: 3,
       name: "Mail",
       icon: <HiOutlineMail size={30} />,
-      href: "mailto:Anupeshkverma121@gmail.com",
+      href: `mailto:${EMAIL}`,
     },
     {
       id: 4,
       name: "Resume",
       icon: <BsFillPersonLinesFill size={30} />,
       style: "rounded-br-md",
-      href: "https://drive.google.com/file/d/1WzSwm9ztfZEup4NHN9gtIhfNvNpKLdaw/view?usp=drive_link",
+      href: RESUME_URL,
     },
   ];
 
@@ -49,7 +50,7 @@ const SocialLinks = () => {
               className={
                 "flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-600" +
                 " " +
-                style
+                (style || "")
               }
             >
               <a
@@ -64,7 +65,6 @@ const SocialLinks = () => {
           ))}
         </ul>
       </motion.div>
-
     </div>
   );
 };

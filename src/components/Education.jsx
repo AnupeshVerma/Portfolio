@@ -15,24 +15,17 @@ function Education() {
     {
       id: 1,
       title: "Motilal Nehru National Institute of Technology Allahabad",
-      degree: "Bachelor of Technology",
+      degree: "Bachelor of Technology (B.Tech)",
       branch: "Electronics and Communication Engineering",
-      duration: "2024",
-      description: "CGPA : 7.89",
+      duration: "2020 - 2024",
+      description: "CGPA: 7.9/10",
     },
     {
       id: 2,
       title: "Sri Sai Inter College",
-      degree: "Senior Secondary School",
+      degree: "Intermediate (Class XII)",
       duration: "2020",
-      description: "Percentage : 76.2%",
-    },
-    {
-      id: 3,
-      title: "Pioneer Montessori High School",
-      degree: "Higher Secondary School",
-      duration: "2017",
-      description: "Percentage : 88.33%",
+      description: "Honored for the best JEE rank in the city",
     },
   ];
 
@@ -57,10 +50,11 @@ function Education() {
           </motion.p>
           <p className="py-6"> </p>
         </div>
-        <div className="min-h-screen py-10" ref={ref}>
+        <div className="py-10" ref={ref}>
           <VerticalTimeline>
             {educationData.map((education) => (
               <VerticalTimelineElement
+                key={education.id}
                 className="education-element"
                 contentStyle={{ background: "transparent", color: "white" }}
                 contentArrowStyle={{ borderRight: "7px solid  white" }}
@@ -70,7 +64,9 @@ function Education() {
               >
                 <h1 className="education-title font-semibold text-xl">{education.title}</h1>
                 <h4 className="education-degree text-gray-400">{education.degree}</h4>
-                <h4 className="education-branch text-gray-400">{education.branch}</h4>
+                {education.branch && (
+                  <h4 className="education-branch text-gray-400">{education.branch}</h4>
+                )}
                 <h4 className="education-description text-gray-400">{education.description}</h4>
               </VerticalTimelineElement>
             ))}

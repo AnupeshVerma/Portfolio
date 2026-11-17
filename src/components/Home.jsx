@@ -1,13 +1,15 @@
 import React, { useEffect } from "react";
 import heroImage from "../assets/heroImage.jpg";
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
+import { RESUME_URL, EMAIL, LINKEDIN_URL, GITHUB_URL } from "../constants";
 
 const Home = () => {
   useEffect(() => {
-    document.title = "Anupesh's Portfolio";
+    document.title = "Anupesh Verma | Data Engineer";
   }, []);
 
   const links = [
@@ -15,34 +17,28 @@ const Home = () => {
       id: 1,
       name: "LinkedIn",
       icon: <FaLinkedin size={35} />,
-      href: "https://www.linkedin.com/in/AnupeshVerma/",
+      href: LINKEDIN_URL,
     },
     {
       id: 2,
       name: "GitHub",
       icon: <FaGithub size={35} />,
-      href: "https://github.com/anupeshverma",
+      href: GITHUB_URL,
     },
     {
       id: 3,
-      name: "Instagram",
-      icon: <FaInstagram size={35} />,
-      href: "https://www.instagram.com/anupesh_verma/",
-    },
-    {
-      id: 4,
       name: "Mail",
       icon: <HiOutlineMail size={35} />,
-      href: "mailto:Anupeshkverma121@gmail.com",
+      href: `mailto:${EMAIL}`,
     },
   ];
 
   return (
     <div
       name="home"
-      className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800"
+      className="min-h-screen md:h-screen w-full bg-gradient-to-b from-black via-black to-gray-800"
     >
-      <div className="max-w-screen-lg mx-auto flex flex-col md:flex-row items-center justify-evenly h-full pt-10 px-4 ">
+      <div className="max-w-screen-lg mx-auto flex flex-col md:flex-row items-center justify-evenly h-full pt-24 pb-24 md:pt-10 md:pb-0 px-4 gap-10">
         <motion.div
           id="sideText"
           className="md:w-1/2 flex flex-col justify-center md:h-full"
@@ -58,7 +54,7 @@ const Home = () => {
             I'm a
             <span className="text-cyan-500">
               <Typewriter
-                words={[" ", " Data Engineer"]}
+                words={[" Data Engineer"]}
                 loop={10}
                 cursor
                 typeSpeed={100}
@@ -66,21 +62,42 @@ const Home = () => {
               />
             </span>
           </div>
-          <p className="text-gray-500 py-2 text-justify max-w-md">
-            From raw data to smart insights: Anupesh here, a data engineer
-            passionate about building reliable data pipelines and turning your
-            data into actionable value.
+          <p className="text-gray-400 py-2 max-w-md">
+            I build production data pipelines that turn raw healthcare files
+            into trusted data for{" "}
+            <span className="text-white font-semibold">60M+ users</span>, using
+            PySpark, Airflow, AWS, and Snowflake, and I build GenAI features on
+            top of the data layer.
           </p>
+
+          <div className="flex flex-wrap gap-4 mt-4">
+            <a
+              href={RESUME_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="px-6 py-3 rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold hover:scale-105 duration-300"
+            >
+              View Resume
+            </a>
+            <Link
+              to="projects"
+              smooth
+              duration={500}
+              className="cursor-pointer px-6 py-3 rounded-md border border-cyan-500 text-cyan-400 font-semibold hover:scale-105 duration-300"
+            >
+              See Projects
+            </Link>
+          </div>
 
           <motion.div
             id="connectLinks"
-            className="md:hidden mt-2"
+            className="md:hidden mt-6"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1.5, duration: 1 }}
           >
             <ul className="list-none flex">
-              {links.map(({ id, name, icon, href }) => (
+              {links.map(({ id, icon, href }) => (
                 <li
                   key={id}
                   className={"mx-2 p-2 rounded-full duration-300 bg-gray-900 "}
@@ -101,8 +118,8 @@ const Home = () => {
         <div id="heroImage" className="md:w-1/2">
           <motion.img
             src={heroImage}
-            alt="myProfile"
-            className="rounded-2xl mx-auto md:w-3/4"
+            alt="Anupesh Kumar Verma"
+            className="rounded-2xl mx-auto w-3/4"
             initial={{ opacity: 0, x: "25vw" }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 1 }}
